@@ -1,4 +1,4 @@
-# WebGb 新闻网站内容发布管理系统（Windows 便携版）
+# WebWin 新闻网站内容发布管理系统（Windows 便携版）
 
 开箱即用的新闻门户 + 内容管理后台。整包内置 Node.js 运行时、Next.js 构建产物、SQLite 数据库与 NSSM 服务封装，**无需安装 Node.js、无需联网**，复制目录即可运行。
 
