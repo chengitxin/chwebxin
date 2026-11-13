@@ -64,14 +64,6 @@ WebWin/
 | 失败处理 | 进程退出后 5 秒自动重启 |
 | 日志 | `logs/service.out.log`、`logs/service.err.log`，单文件超 10MB 轮转 |
 
-常用维护命令（管理员命令行）：
-
-```bat
-net start WebGbPortable     :: 启动
-net stop  WebGbPortable     :: 停止
-sc query  WebGbPortable     :: 查看状态
-```
-
 卸载服务：双击 [卸载服务.bat](卸载服务.bat)，或执行 `nssm\nssm.exe remove WebGbPortable confirm`。卸载只移除服务，**不会删除任何项目文件**。
 
 ---
