@@ -68,19 +68,7 @@ WebWin/
 
 ---
 
-## 三、首次启动做了什么
-
-`service.js` 在加载 Next.js 之前完成三件事，因此不需要手工编辑任何配置：
-
-1. **AUTH_SECRET**：优先读取 `app/.env`；不存在时随机生成 32 字节密钥并写入该文件，同时写入 `AUTH_TRUST_HOST=true`。
-2. **DATABASE_URL**：按当前目录动态计算为 `file:<项目根>/prisma/data.db`，路径含空格也能正常工作。
-3. **NODE_ENV / PORT / HOSTNAME**：默认 `production` / `3000` / `0.0.0.0`；安装为服务时 `PORT` 由 [安装为服务.bat](安装为服务.bat) 传入（默认 `80`）。
-
-因为所有路径都是相对路径，整个目录可以随意换盘符、换机器、改文件夹名，无需改配置。
-
----
-
-## 四、登录与账号
+## 三、登录与账号
 
 - 登录页：`/login`，注册页：`/register`
 - 默认管理员账号（已随 `prisma/data.db` 内置）：
