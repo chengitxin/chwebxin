@@ -39,4 +39,4 @@
 
 - 登录页：`/login`，注册页：`/register`
 - 默认管理员账号（已随 `prisma/data.db` 内置）：
-- 用户名：admin       密码：Admin@123
+- 用户名：admin  密码：Admin@123
