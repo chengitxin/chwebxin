@@ -1,0 +1,228 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/admin/album/[id]",
+      "regex": "^/admin/album/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/album/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/entries/[id]",
+      "regex": "^/admin/entries/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/entries/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/admin/series/[id]",
+      "regex": "^/admin/series/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/series/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/asset/[...path]",
+      "regex": "^/api/asset/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpath": "nxtPpath"
+      },
+      "namedRegex": "^/api/asset/(?<nxtPpath>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/auth/[...nextauth]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnextauth": "nxtPnextauth"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
+    },
+    {
+      "page": "/entries/[id]",
+      "regex": "^/entries/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/entries/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/music/album/[id]",
+      "regex": "^/music/album/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/music/album/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/topics/[id]",
+      "regex": "^/topics/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/topics/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/video/series/[id]",
+      "regex": "^/video/series/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/video/series/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/admin",
+      "regex": "^/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/album",
+      "regex": "^/admin/album(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/album(?:/)?$"
+    },
+    {
+      "page": "/admin/entries",
+      "regex": "^/admin/entries(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/entries(?:/)?$"
+    },
+    {
+      "page": "/admin/entries/new",
+      "regex": "^/admin/entries/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/entries/new(?:/)?$"
+    },
+    {
+      "page": "/admin/headline",
+      "regex": "^/admin/headline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/headline(?:/)?$"
+    },
+    {
+      "page": "/admin/music",
+      "regex": "^/admin/music(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/music(?:/)?$"
+    },
+    {
+      "page": "/admin/sections",
+      "regex": "^/admin/sections(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/sections(?:/)?$"
+    },
+    {
+      "page": "/admin/series",
+      "regex": "^/admin/series(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/series(?:/)?$"
+    },
+    {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
+      "page": "/admin/topics",
+      "regex": "^/admin/topics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/topics(?:/)?$"
+    },
+    {
+      "page": "/admin/users",
+      "regex": "^/admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/users(?:/)?$"
+    },
+    {
+      "page": "/admin/video",
+      "regex": "^/admin/video(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/video(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/music",
+      "regex": "^/music(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/music(?:/)?$"
+    },
+    {
+      "page": "/register",
+      "regex": "^/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/register(?:/)?$"
+    },
+    {
+      "page": "/search",
+      "regex": "^/search(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/search(?:/)?$"
+    },
+    {
+      "page": "/video",
+      "regex": "^/video(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/video(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

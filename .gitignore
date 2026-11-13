@@ -1,0 +1,20 @@
+# ===== 密钥与本地配置（首次启动由 service.js 自动生成）=====
+app/.env
+
+# ===== Next.js 运行时缓存（启动后自动重建，不入库）=====
+app/.next/server/route-cache/
+app/.next/cache/
+
+# ===== 运行日志 =====
+logs/
+*.log
+
+# ===== 系统/编辑器临时文件 =====
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+
+# 说明：本仓库按“完整可运行包”维护，以下内容故意入库，请勿忽略：
+#   app/.next、app/node_modules、node/node.exe、nssm/nssm.exe、
+#   app/public/uploads、prisma/data.db
