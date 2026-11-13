@@ -8,29 +8,7 @@
 
 ---
 
-## 一、目录结构
-
-```
-WebWin/
-├─ service.js              # 便携版启动器：注入环境变量后加载 app/server.js
-├─ 安装为服务.bat          # 管理员运行：注册并启动 Windows 服务（默认端口 80）
-├─ 卸载服务.bat            # 停止并移除服务（保留全部文件）
-├─ node/node.exe           # 内置 Node.js v26.13.0（x64）
-├─ nssm/nssm.exe           # NSSM，Windows 服务封装工具
-├─ app/
-│  ├─ server.js            # Next.js standalone 服务入口（构建产物）
-│  ├─ .next/               # 构建产物（页面、路由、服务端代码）
-│  ├─ node_modules/        # 运行时依赖
-│  ├─ public/
-│  │  ├─ assets/           # 站点徽标
-│  │  └─ uploads/          # 后台上传的图片/音乐/视频
-│  ├─ package.json
-│  └─ .env                 # 首次启动自动生成，已被 .gitignore 排除
-├─ prisma/
-│  ├─ schema.prisma        # 数据库模型
-│  └─ data.db              # SQLite 数据文件（含现有站点数据）
-└─ logs/                   # 服务运行日志（自动创建、自动轮转）
-```
+## 一、技术栈
 
 技术栈：Next.js 15（App Router / standalone）、React 19、TypeScript、Tailwind CSS 4、Prisma 6 + SQLite、NextAuth v5、Tiptap 3、bcryptjs、Zod。
 
