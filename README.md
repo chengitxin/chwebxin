@@ -31,7 +31,7 @@
 - 后台：`http://localhost:端口号/admin`
 - 局域网：`http://本机IP:端口号`（需在防火墙放行该端口）
 
-卸载服务：双击 [卸载服务.bat](卸载服务.bat)，或执行 `nssm\nssm.exe remove WebGbPortable confirm`。卸载只移除服务，**不会删除任何项目文件**。
+卸载服务：双击 [卸载服务.bat](卸载服务.bat)。卸载只移除服务，**不会删除任何项目文件**。
 
 ---
 
