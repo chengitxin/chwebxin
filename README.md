@@ -12,6 +12,8 @@
 
 技术栈：Next.js 15（App Router / standalone）、React 19、TypeScript、Tailwind CSS 4、Prisma 6 + SQLite、NextAuth v5、Tiptap 3、bcryptjs、Zod。
 
+---
+
 ## 二、安装与启动
 
 ### 1. 修改端口（可选）
