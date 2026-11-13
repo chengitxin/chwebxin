@@ -96,34 +96,3 @@ sc query  WebGbPortable     :: 查看状态
 | 用户名 | 密码 | 角色 |
 | --- | --- | --- |
 | `admin` | `Admin@123` | `ADMIN` |
-
-> 这是随仓库发布的默认凭证，**正式对外部署前请立即修改**；仓库包含 `data.db`，若公开仓库等同于公开该密码。
-> 修改方式：先 `/register` 注册新管理员账号 → 停止服务 → 将其 `role` 改为 `ADMIN`（见下方 SQL）→ 启动服务登录，再按需处理旧账号。
-
-- 角色共五种：`ADMIN`（管理员）、`EDITOR`（编辑）、`MUSIC_ADMIN`（音乐管理员）、`VIDEO_ADMIN`（视频管理员）、`USER`（普通用户），由管理员在后台「用户管理」中调整
-- 新注册账号的角色为 `USER`。需要提升权限或增加管理员时，停止服务后用 SQLite 工具（如 DB Browser for SQLite）打开 `prisma/data.db` 执行：
-
-```sql
-UPDATE User SET role = 'ADMIN' WHERE username = '目标用户名';
-```
-
-- 密码以 bcrypt 哈希存储，无法反解、也不能在库里直接写明文。忘记密码时，推荐注册新账号并按上面的 SQL 提权，再用新账号登录后台。
-
----
-
-## 五、配置说明
-
-### 环境变量（一般无需修改）
-
-| 变量 | 默认值 | 说明 |
-| --- | --- | --- |
-| `PORT` | `80`（`安装为服务.bat` 第 7 行；未传入时 `service.js` 兜底 `3000`） | HTTP 监听端口 |
-| `HOSTNAME` | `0.0.0.0` | 监听地址，`0.0.0.0` 表示允许局域网访问 |
-| `DATABASE_URL` | 自动指向 `prisma/data.db` | SQLite 连接串，由 `service.js` 注入 |
-| `AUTH_SECRET` | 自动生成并写入 `app/.env` | NextAuth 会话签名密钥 |
-| `NODE_ENV` | `production` | 运行模式 |
-| `KEEP_ALIVE_TIMEOUT` | 未设置 | 可选，HTTP 长连接超时（毫秒） |
-
-### 站点配置
-
-站点标题、副标题、徽标、导航样式、页头元素开关、首页轮播间隔与切换效果、各列表分页条数、页脚备案信息、整站主题、视频采集 KEY 等，全部在后台 **系统设置** 中修改，保存在数据库 `Config` 表，修改后立即生效。
