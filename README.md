@@ -53,17 +53,6 @@ WebWin/
 - 后台：`http://localhost:端口号/admin`
 - 局域网：`http://本机IP:端口号`（需在防火墙放行该端口）
 
-脚本实际执行的动作（便于排查）：
-
-| 配置项 | 值 |
-| --- | --- |
-| 服务名 | `WebGbPortable` |
-| 可执行程序 | `node\node.exe` + 参数 `service.js` |
-| 工作目录 | 项目根目录 |
-| 启动类型 | 自动（开机自启） |
-| 失败处理 | 进程退出后 5 秒自动重启 |
-| 日志 | `logs/service.out.log`、`logs/service.err.log`，单文件超 10MB 轮转 |
-
 卸载服务：双击 [卸载服务.bat](卸载服务.bat)，或执行 `nssm\nssm.exe remove WebGbPortable confirm`。卸载只移除服务，**不会删除任何项目文件**。
 
 ---
